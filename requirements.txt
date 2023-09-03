@@ -13,7 +13,7 @@ h11==0.14.0
 idna==3.4
 matplotlib-inline==0.1.6
 nest-asyncio==1.5.7
-numpy==1.25.2
+numpy==1.21.2
 packaging==23.1
 pandas==2.1.0
 parso==0.8.3
