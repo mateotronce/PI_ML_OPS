@@ -46,7 +46,8 @@ estos son los siguientes:
 1. **README**: Este es el archivo que estás leyendo en este momento.
 2. **app.py**: Aquí se encuentra desarrollada la API, por lo que las funciones de la API se toman de este archivo.
 3. **funciones_API.py**: Estas son las mismas funciones de la API, pero están diseñadas para ejecutarse de manera local sin la necesidad de la librería FastAPI.
-4. **requirements.txt**: Este archivo contiene la lista de dependencias que tu máquina necesita para ejecutar todos los archivos sin problemas. Para instalar estas dependencias, debes usar el siguiente comando:
+4. **EDA.ipynb**: Es un pequeño EDA que ayuda a observar de mejor manera los csv principales
+5. **requirements.txt**: Este archivo contiene la lista de dependencias que tu máquina necesita para ejecutar todos los archivos sin problemas. Para instalar estas dependencias, debes usar el siguiente comando:
 
 ```bash
 pip install -r requirements.txt
