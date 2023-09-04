@@ -41,7 +41,7 @@ Hay tres carpetas en total. Dentro de la carpeta "csv", se encuentran todos los 
 
 ## ¿Y los archivos que no están en carpetas?
 
-Bueno, estos son los siguientes:
+estos son los siguientes:
 
 1. **README**: Este es el archivo que estás leyendo en este momento.
 2. **app.py**: Aquí se encuentra desarrollada la API, por lo que las funciones de la API se toman de este archivo.
