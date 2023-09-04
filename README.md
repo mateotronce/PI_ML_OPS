@@ -8,6 +8,7 @@ El dataset utilizado se encuentra en: [Enlace al dataset](https://drive.google.c
 El proyecto utiliza varios conjuntos de datos relacionados con Steam y las actividades de los usuarios en la plataforma. Los datos se obtuvieron en formato JSON, por lo que se transformaron a formato CSV para un mejor tratamiento de estos. A partir de esto, se generaron distintos archivos CSV para facilitar el ingreso de los datos a la API. Por ejemplo, en el dataset de juegos, se eliminaron los archivos nulos que venían en el JSON. Luego, se realizaron las funciones que se utilizarán en la API y, utilizando un modelo de similitud coseno, se generó una matriz de correlaciones entre usuarios y otra de ítems. A partir de esto, se generaron las últimas dos funciones de predicción.
 
 ## ¿Qué archivos se utilizan dentro de la API?
+
 Se utilizan los siguientes archivos:
 
 - `reviews_analizadas.csv`: Contiene reseñas de juegos realizadas por los usuarios, incluyendo análisis de sentimientos.
@@ -19,6 +20,7 @@ Se utilizan los siguientes archivos:
 - `matriz_datos_juegos.csv`: Contiene información sobre los juegos y su relación con otros juegos (similitud).
 
 ## Funciones de la API
+
 El proyecto ofrece una serie de funciones de la API que permiten a los usuarios acceder a información y recomendaciones específicas:
 
 - `/Informacion/{User_id}`: Proporciona información sobre un usuario específico, incluyendo la cantidad gastada en juegos y el porcentaje de reseñas positivas realizadas por ese usuario.
@@ -29,5 +31,22 @@ El proyecto ofrece una serie de funciones de la API que permiten a los usuarios 
 - `/sentiment/{fecha}`: Calcula la cantidad de revisiones con diferentes tipos de sentimiento (negativo, positivo y neutral) en un año específico.
 
 ### Funciones de Machine Learning en la API
+
 - `/recomendacionuser/{usuario}`: Genera recomendaciones de juegos para un usuario específico basadas en la similitud de comportamiento con otros usuarios.
 - `/recomendacionitem/{item}`: Proporciona recomendaciones de juegos similares a uno dado por el nombre del juego.
+- 
+## ¿Qué hay en las carpetas?
+
+Hay tres carpetas en total. Dentro de la carpeta "csv", se encuentran todos los archivos de tipo CSV que se utilizan para la toma de información. En la carpeta "ML" se encuentra el trabajo que se realizó con los datos para que pudieran ser utilizados con el modelo. También se encuentran los archivos de NumPy que sirven como base para las relaciones entre los usuarios y los elementos. Por último, está la carpeta de "Limpieza de datos", que como su nombre indica, contiene los códigos que se utilizaron en el proceso ETL, los cuales se aplicaron a los archivos mencionados en la sección de "datos utilizados".
+
+## ¿Y los archivos que no están en carpetas?
+
+Bueno, estos son los siguientes:
+
+1. **README**: Este es el archivo que estás leyendo en este momento.
+2. **app.py**: Aquí se encuentra desarrollada la API, por lo que las funciones de la API se toman de este archivo.
+3. **funciones_API.py**: Estas son las mismas funciones de la API, pero están diseñadas para ejecutarse de manera local sin la necesidad de la librería FastAPI.
+4. **requirements.txt**: Este archivo contiene la lista de dependencias que tu máquina necesita para ejecutar todos los archivos sin problemas. Para instalar estas dependencias, debes usar el siguiente comando:
+
+```bash
+pip install -r requirements.txt
